@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A.R Premium Mobile Cut provides trusted home barber services and business websites across Abuja.">
+  <title>A.R Premium Services | Mobile Cut & Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root { --ink:#101010; --ink-soft:#181818; --gold:#d4af37; --gold-light:#f0d779; --cream:#f4efe5; --muted:#aaa59a; --line:rgba(212,175,55,.2); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ink); color:#fff; font-family:'DM Sans',sans-serif; line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; width:100%; object-fit:cover; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .topbar { position:absolute; z-index:5; width:100%; padding:20px 0; }
+    .nav { display:flex; align-items:center; justify-content:space-between; }
+    .brand { font:700 1.1rem 'Space Grotesk',sans-serif; letter-spacing:-.03em; }
+    .brand span { color:var(--gold); }
+    .nav-links { display:none; gap:26px; color:#d2d0c9; font-size:.88rem; }
+    .nav-links a:hover { color:var(--gold); }
+    .nav-cta { border:1px solid var(--gold); color:var(--gold); padding:8px 14px; border-radius:3px; font-size:.78rem; font-weight:700; }
+    .hero { min-height:680px; display:flex; align-items:center; position:relative; overflow:hidden; background:linear-gradient(90deg,rgba(16,16,16,.96) 12%,rgba(16,16,16,.68) 55%,rgba(16,16,16,.2)),url('Flyer.jpg') center/cover; }
+    .hero:after { content:''; position:absolute; inset:auto 0 0; height:90px; background:linear-gradient(transparent,var(--ink)); }
+    .hero-content { position:relative; z-index:1; padding:100px 0 70px; max-width:730px; }
+    .owner-note { color:var(--gold-light); font-size:.82rem; font-weight:600; margin:-8px 0 18px; }
+    .eyebrow { color:var(--gold); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; font-weight:700; }
+    h1,h2,h3 { font-family:'Space Grotesk',sans-serif; line-height:1.08; margin:0; }
+    h1 { font-size:clamp(2.7rem,9vw,5.9rem); letter-spacing:-.065em; margin:16px 0 22px; }
+    .hero p { max-width:590px; color:#d5d1c9; font-size:1rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; border:1px solid var(--gold); padding:13px 18px; border-radius:3px; font-weight:700; font-size:.86rem; transition:.25s; }
+    .btn-gold { background:var(--gold); color:var(--ink); }
+    .btn:hover { transform:translateY(-3px); background:var(--gold-light); color:var(--ink); }
+    .btn-outline:hover { background:var(--gold); }
+    .section { padding:92px 0; }
+    .section-heading { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:36px; }
+    .section-heading h2 { font-size:clamp(2rem,5vw,3.25rem); letter-spacing:-.05em; }
+    .section-heading p { color:var(--muted); max-width:280px; font-size:.9rem; margin:0; }
+    .gold { color:var(--gold); }
+    .benefits { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+    .benefit { background:var(--ink); padding:25px 18px; min-height:190px; }
+    .benefit i { color:var(--gold); font-size:1.3rem; margin-bottom:34px; }
+    .benefit h3 { font-size:1rem; margin-bottom:7px; }
+    .benefit p { color:var(--muted); font-size:.84rem; margin:0; }
+    .alt { background:var(--cream); color:var(--ink); }
+    .prices { display:grid; gap:12px; }
+    .price-card { display:flex; align-items:center; justify-content:space-between; gap:20px; background:#fff; padding:22px; border-left:3px solid var(--gold); }
+    .price-card h3 { font-size:1.1rem; }
+    .price-card p { color:#777; font-size:.82rem; margin:6px 0 0; }
+    .price { color:var(--ink); font:700 1.2rem 'Space Grotesk',sans-serif; white-space:nowrap; }
+    .coverage { background:var(--ink-soft); border:1px solid var(--line); padding:28px; margin-top:35px; display:flex; align-items:center; gap:18px; }
+    .coverage i { color:var(--gold); font-size:1.5rem; }
+    .coverage strong { display:block; font:600 1rem 'Space Grotesk',sans-serif; }
+    .coverage span { display:block; color:var(--muted); font-size:.86rem; }
+    .owner-card { border:1px solid var(--line); background:var(--ink-soft); padding:28px; }
+    .owner-card h2 { font-size:clamp(1.8rem,4vw,2.7rem); margin:10px 0 14px; }
+    .owner-card p { color:var(--muted); max-width:760px; margin:0; }
+    .owner-contact { display:flex; flex-wrap:wrap; gap:18px; margin-top:20px; color:var(--gold-light); font-size:.86rem; }
+    .gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .gallery figure { margin:0; aspect-ratio:1/1.1; overflow:hidden; position:relative; }
+    .gallery figure:first-child { grid-column:span 2; aspect-ratio:1.7/1; }
+    .gallery img { height:100%; transition:transform .5s; filter:saturate(.75); }
+    .gallery figure:hover img { transform:scale(1.05); }
+    .steps { display:grid; gap:0; border-top:1px solid var(--line); }
+    .step { display:flex; gap:22px; padding:25px 0; border-bottom:1px solid var(--line); }
+    .step-num { color:var(--gold); font:700 1.3rem 'Space Grotesk',sans-serif; }
+    .step h3 { font-size:1.05rem; margin-bottom:4px; }
+    .step p { margin:0; color:var(--muted); font-size:.85rem; }
+    .web-card { background:linear-gradient(120deg,#211f18,#171717); border:1px solid var(--line); padding:34px 26px; position:relative; overflow:hidden; }
+    .web-card:after { content:'</>'; position:absolute; right:20px; bottom:-24px; color:rgba(212,175,55,.09); font:700 9rem 'Space Grotesk'; }
+    .web-card h2 { max-width:580px; font-size:clamp(2rem,6vw,3.3rem); margin:12px 0; }
+    .web-card p { color:#c0baad; max-width:530px; }
+    .reviews { display:grid; gap:14px; }
+    .review { background:var(--ink-soft); padding:25px; border:1px solid #282828; }
+    .stars { color:var(--gold); font-size:.75rem; letter-spacing:3px; }
+    .review blockquote { margin:15px 0 20px; font-size:.94rem; color:#dedbd4; }
+    .review cite { color:var(--muted); font-size:.78rem; font-style:normal; }
+    footer { border-top:1px solid var(--line); padding:55px 0 80px; }
+    .footer-grid { display:grid; gap:30px; }
+    .footer-title { font:700 1.35rem 'Space Grotesk'; }
+    .footer-copy { color:var(--muted); font-size:.85rem; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:18px; color:var(--gold); font-size:.86rem; }
+    .copyright { border-top:1px solid #292929; color:#6f6d67; font-size:.75rem; margin-top:38px; padding-top:18px; }
+    .float-wa { position:fixed; z-index:10; bottom:20px; right:20px; width:54px; height:54px; display:grid; place-items:center; background:#25d366; color:#fff; border-radius:50%; font-size:1.5rem; box-shadow:0 8px 25px #0008; }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s,transform .7s; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media (min-width:700px) { .nav-links { display:flex; } .hero { min-height:760px; } .benefits { grid-template-columns:repeat(4,1fr); } .gallery { grid-template-columns:repeat(3,1fr); } .gallery figure:first-child { grid-column:span 2; } .reviews { grid-template-columns:repeat(3,1fr); } .footer-grid { grid-template-columns:1.2fr 1fr 1fr; } .section { padding:120px 0; } }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap nav"><a class="brand" href="#top">A.R <span>PREMIUM</span></a><nav class="nav-links"><a href="#services">Services</a><a href="#gallery">Styles</a><a href="#reviews">Reviews</a></nav><a class="nav-cta" href="https://wa.me/2348131674549" target="_blank" rel="noopener">Book a cut</a></div></header>
+  <main id="top">
+    <section class="hero"><div class="wrap hero-content"><div class="eyebrow">Mobile cut & web · Abuja</div><h1>Are You In Abuja Tired Of Getting The Wrong Hairstyle?</h1><div class="owner-note">Owned &amp; Managed by Abdulrahman Isah</div><p>Looking for a professional personal barber from the comfort of your home? At A.R Premium Mobile Cut, we give you your best cut in your own space. Trusted and reliable.</p><div class="actions"><a class="btn btn-gold" href="https://wa.me/2348131674549?text=Hello%20A.R%20Premium%20Services%2C%20I%20would%20like%20to%20book%20a%20home%20cut." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Book home service</a><a class="btn btn-outline" href="#gallery"><i class="fa-solid fa-scissors"></i> See haircut styles</a></div></div></section>
+    <section class="section reveal" id="about"><div class="wrap"><div class="owner-card"><div class="eyebrow">About the owner</div><h2>A premium service, personally managed.</h2><p>A.R Premium Services is proudly owned by Abdulrahman Isah, based in Federal Housing, Pyakasa, Lugbe, Abuja FCT. Dedicated to giving you premium home service.</p><div class="owner-contact"><a href="tel:+2348131674549"><i class="fa-solid fa-phone"></i> 08131674549</a><a href="mailto:abdulrahmanisah02020@gmail.com"><i class="fa-solid fa-envelope"></i> abdulrahmanisah02020@gmail.com</a></div></div></div></section>
+    <section class="section reveal"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">The premium difference</div><h2>Why choose <span class="gold">home service?</span></h2></div><p>Your time and comfort matter. Get a clean, personal experience without the queue.</p></div><div class="benefits"><article class="benefit"><i class="fa-solid fa-clock"></i><h3>No queue</h3><p>Your appointment, your time. No waiting around.</p></article><article class="benefit"><i class="fa-solid fa-house"></i><h3>Comfort of your home</h3><p>Enjoy your cut in a familiar, relaxed space.</p></article><article class="benefit"><i class="fa-solid fa-shield-halved"></i><h3>Sterilized tools</h3><p>Professional equipment, prepared for every client.</p></article><article class="benefit"><i class="fa-solid fa-award"></i><h3>Trusted & reliable</h3><p>Consistent detail from a barber who cares.</p></article></div></div></section>
+    <section class="section alt reveal" id="services"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">Simple, transparent pricing</div><h2>Services & prices</h2></div><p>Home service only within the Abuja axis. Message to secure your preferred time.</p></div><div class="prices"><article class="price-card"><div><h3>Adult cut</h3><p>Low cut, Afro or fade</p></div><strong class="price">N7,000</strong></article><article class="price-card"><div><h3>Beard grooming & shaping</h3><p>Sharp lines, clean finish</p></div><strong class="price">N4,000</strong></article><article class="price-card"><div><h3>Kids cut (home)</h3><p>Patient, careful and clean</p></div><strong class="price">N5,000</strong></article><article class="price-card"><div><h3>Complete package</h3><p>Cut + beard + powder</p></div><strong class="price">N7,000</strong></article></div><div class="coverage"><i class="fa-solid fa-location-dot"></i><div><strong>We cover the Abuja axis</strong><span>Lugbe · Pyakasa · Trademore · Voice of Nigeria · Airport Road · FHA · Kuje · Gwagwalada · Central Abuja</span></div></div></div></section>
+    <section class="section reveal" id="gallery"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">The A.R finish</div><h2>Fresh cuts. <span class="gold">Every time.</span></h2></div><p>Clean fades and confident shape-ups made for your face and your style.</p></div><div class="gallery"><figure><img src="Flyer.jpg" alt="A.R Premium haircut service" style="width:100%; height:100%; object-fit:cover; border-radius:12px;"></figure><figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=85" alt="Fresh fade haircut detail"></figure><figure><img src="https://images.unsplash.com/photo-1622286346003-cd4f9f8f4e0c?auto=format&fit=crop&w=700&q=85" alt="Professional barber tools and haircut"></figure><figure><img src="https://images.unsplash.com/photo-1593702295094-aea8c7f0e3c1?auto=format&fit=crop&w=700&q=85" alt="Clean barber haircut style"></figure><figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=700&q=85" alt="Barber working on a client's hair"></figure></div></div></section>
+    <section class="section alt reveal"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">Your appointment</div><h2>How it works</h2></div></div><div class="steps"><div class="step"><div class="step-num">01</div><div><h3>Chat on WhatsApp</h3><p>Tell me the service you want and your preferred time.</p></div></div><div class="step"><div class="step-num">02</div><div><h3>Share your location</h3><p>Send your location anywhere in Lugbe or the Abuja axis.</p></div></div><div class="step"><div class="step-num">03</div><div><h3>I come with my tools</h3><p>Everything needed for a professional cut comes with me.</p></div></div><div class="step"><div class="step-num">04</div><div><h3>You get your best cut</h3><p>Relax, enjoy the service and step out looking sharp.</p></div></div></div></div></section>
+    <section class="section reveal"><div class="wrap"><div class="web-card"><div class="eyebrow">A second premium service</div><h2>Also need a business website?</h2><p>I build fast, clear business websites for farms, barbers and shops. Make it easy for people to find you, trust you and reach you.</p><a class="btn btn-gold" href="https://wa.me/2348131674549?text=Hello%20Abdulrahman%2C%20I%20need%20a%20business%20website." target="_blank" rel="noopener">Start a web project · From N25k</a></div></div></section>
+    <section class="section reveal" id="reviews"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">From the Abuja community</div><h2>Good words, <span class="gold">great cuts.</span></h2></div></div><div class="reviews"><article class="review"><div class="stars">★★★★★</div><blockquote>“He came right on time and the fade was exactly what I showed him. Very professional.”</blockquote><cite>— Daniel O., Lugbe</cite></article><article class="review"><div class="stars">★★★★★</div><blockquote>“The convenience is unmatched. My son got his haircut at home and Abdulrahman was so patient.”</blockquote><cite>— Amina I., Airport Road</cite></article><article class="review"><div class="stars">★★★★★</div><blockquote>“Clean tools, clean work and a really sharp finish. A reliable Abuja barber.”</blockquote><cite>— Samuel K., Central Area</cite></article></div></div></section>
+  </main>
+  <footer><div class="wrap"><div class="footer-grid"><div><div class="footer-title">A.R <span class="gold">Premium Services</span></div><p class="footer-copy">Premium mobile cuts and practical websites, delivered with care by Abdulrahman Isah.</p></div><div><div class="eyebrow">Find us at home</div><p class="footer-copy">Federal Housing, Pyakasa,<br>Lugbe, Abuja FCT<br><br>Home service only within Abuja axis.</p></div><div><div class="eyebrow">Reach out</div><div class="footer-links"><a href="https://wa.me/2348131674549" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a><a href="tel:+2348131674549"><i class="fa-solid fa-phone"></i> Call</a><a href="mailto:abdulrahmanisah02020@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></div><p class="footer-copy">Direct Owner Line: Abdulrahman Isah<br>08131674549<br>abdulrahmanisah02020@gmail.com<br><br>Open 8am–8pm daily</p></div></div><div class="copyright">© 2026 A.R Premium Services - Owned by Abdulrahman Isah. All Rights Reserved. | Federal Housing, Pyakasa, Lugbe, Abuja</div></div></footer>
+  <a class="float-wa" href="https://wa.me/2348131674549" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script>
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
